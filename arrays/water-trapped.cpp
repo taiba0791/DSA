@@ -30,7 +30,7 @@ void trap(int *heights,int n){
 
 
 int main() {
-    int heights[]={4, 2, 0, 6, 3, 2, 5};
+    int heights[]={5, 4, 3, 2, 1};
     int n=sizeof(heights)/sizeof(int);
      trap(heights,n);
   
