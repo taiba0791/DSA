@@ -1,25 +1,26 @@
 #include <iostream>
 using namespace std;
 
-void insertionSort(char ch[], int n){
-    for(int i=0;i<n;i++){
-         int curr = ch[i];
-         int prev = i-1;
-         while(prev >=0 && ch[prev]>curr){
-            swap(ch[prev],ch[prev+1]);
-            prev--;
-         }
+int Search(int mat[][3], int n,int m){
+   int target =8;
+   for(int i=0;i<n;i++){
+    for( int j=0;j<m;j++){
+        if(mat[i][j]==target){
+            cout<<i<<","<<j<<endl;
+
+        }
     }
-    cout<<"Sorted Array: ";
-    for(int i=0;i<n;i++){
-     cout<<ch[i]<<" ";
-    }   
-    
+   }
+    return -1;
 }
 
-int main() {
-   char ch[] = {'f','b', 'a', 'e', 'd', 'c'};
-   int n=sizeof(ch)/sizeof(char);
-    insertionSort(ch,n);
+int main(){
+    int matrix[3][3] ={
+        {1,2,3},
+        {4,5,6},
+        {7,8,9}
+    };
+    Search(matrix,3,3);
+
     return 0;
 }
